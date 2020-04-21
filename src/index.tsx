@@ -1,7 +1,5 @@
 import React from 'react'
+import ReactDOM from 'react-dom'
+import Index from './page/index'
 
-export default class Index extends React.PureComponent {
-  render() {
-    return <div>hello world</div>
-  }
-}
+ReactDOM.render(<Index />, document.querySelector('#app'))
