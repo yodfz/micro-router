@@ -1,6 +1,7 @@
 {
   "plugins": [
     [
+      // 先进的代码兼容插件
       "@babel/plugin-transform-runtime",
       {
         "corejs": 3,
@@ -10,6 +11,7 @@
   ],
   "presets": [
     [
+      // 先进的代码兼容插件
       "@babel/preset-env",
       {
         "modules": false,
@@ -19,7 +21,9 @@
         }
       }
     ],
+    // react转换插件
     "@babel/preset-react",
+    // ts转换插件
     "@babel/preset-typescript"
   ]
 }
