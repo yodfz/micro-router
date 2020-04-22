@@ -1,0 +1,25 @@
+{
+  "plugins": [
+    [
+      "@babel/plugin-transform-runtime",
+      {
+        "corejs": 3,
+        "useESModules": true
+      }
+    ]
+  ],
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "modules": false,
+        "targets": {
+          // 仅做chrome兼容
+          "chrome": "70"
+        }
+      }
+    ],
+    "@babel/preset-react",
+    "@babel/preset-typescript"
+  ]
+}

@@ -6,10 +6,11 @@ module.exports = {
   extends: [
     'plugin:react/recommended',
     'airbnb',
-    'plugin:prettier/recommended',
+    // 配置允许导入ts文件
     'plugin:import/errors',
     'plugin:import/warnings',
     'plugin:import/typescript',
+    'plugin:prettier/recommended',
   ],
   globals: {
     Atomics: 'readonly',
@@ -25,6 +26,11 @@ module.exports = {
   },
   plugins: ['react', '@typescript-eslint', 'prettier'],
   rules: {
+    // js中使用的类库都存在于dev中
+    'import/no-extraneous-dependencies': [
+      'error',
+      { devDependencies: ['**/*.test.js', '**/*.js'] },
+    ],
     'prettier/prettier': 'error',
     'react/jsx-filename-extension': [
       'error',
