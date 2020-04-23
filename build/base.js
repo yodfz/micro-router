@@ -7,7 +7,7 @@ module.exports = {
   mode: 'development', // development
   devtool: 'cheap-source-map',
   entry: {
-    app: ['./src/index.tsx', './src/test.tsx'],
+    app: './src/index.tsx',
   },
   output: {
     filename: 'js/[name].js',
@@ -29,6 +29,32 @@ module.exports = {
             loader: 'html-loader',
             options: {
               minimize: true,
+            },
+          },
+        ],
+      },
+      {
+        test: /\.less$/,
+        use: [
+          {
+            loader: 'style-loader',
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              modules: {
+                // 创建css module防止css全局污染
+                localIndentName: '[local][name]-[hash:base64:4]',
+              },
+            },
+          },
+          {
+            loader: 'less-loader',
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              plugins: ['autoprefixer'],
             },
           },
         ],

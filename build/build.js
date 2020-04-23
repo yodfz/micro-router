@@ -18,6 +18,6 @@ webpack(webpackConfig, (err, stats) => {
       chunkModules: false,
     })}\n\n`
   )
-  console.log(chalk.cyan('打包完成.'))
+  console.log(chalk.cyan(`打包完成，文件存放于:${webpackConfig.output.path}`))
   console.log(chalk.cyan(`总耗时:${new Date() - starttime}毫秒`))
 })
