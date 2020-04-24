@@ -1,0 +1,72 @@
+{
+  //配置 ESLint 检查的文件类型
+  "eslint.validate": [],
+  //保存时eslint自动修复错误
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "editor.codeActionsOnSave": {
+    // eslint修复js文件
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
+  },
+  //保存自动格式化
+  "editor.formatOnSave": true,
+  //设置默认格式化工具为prettier
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[css]": {
+    "editor.defaultFormatter": "stylelint.vscode-stylelint"
+  },
+  "todo-tree.tree.showScanModeButton": false,
+  "todo-tree.highlights.enabled": false,
+  "todo-tree.general.revealBehaviour": "highlight todo",
+  "todo-tree.general.statusBar": "tags",
+  "todo-tree.highlights.customHighlight": {
+    "todo": {
+      "background": "#f90",
+      "foreground": "#fff",
+      "rulerColour": "#f90",
+      "iconColour": "#f90"
+    },
+    "done": {
+      "icon": "issue-closed",
+      "foreground": "#fdff03",
+      "rulerColour": "#fdff03",
+      "iconColour": "#fdff03"
+    },
+    "fix": {
+      "icon": "beaker",
+      "foreground": "#fb0200",
+      "rulerColour": "#fb0200",
+      "iconColour": "#fb0200",
+      "rulerLane": "full"
+    },
+    "tag": {
+      "icon": "tag",
+      "foreground": "#67cdfe",
+      "rulerColour": "#67cdfe",
+      "iconColour": "#67cdfe",
+      "rulerLane": "full"
+    },
+    "note": {
+      "foreground": "#02dc00",
+      "icon": "note",
+      "rulerColour": "#02dc00",
+      "iconColour ": "#02dc00"
+    }
+  },
+  "editor.fontFamily": "'Source Code Pro',Menlo, Monaco, 'Courier New', monospace",
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.editorAssociations": [],
+  "eslint.alwaysShowStatus": true,
+  "eslint.format.enable": true,
+  "vsicons.dontShowNewVersionMessage": true,
+  "highlight-matching-tag.highlightFromContent": true,
+  "highlight-matching-tag.highlightSelfClosing": true,
+  "diffEditor.ignoreTrimWhitespace": true,
+  "editor.renderControlCharacters": true,
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "files.associations": {},
+  "editor.rulers": []
+}
